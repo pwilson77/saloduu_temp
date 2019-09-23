@@ -1,0 +1,154 @@
+// width variables
+$width: 100%;
+$col-size: $width / 12;
+
+body {
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+//the grid
+
+// for larger screens above 768px
+@for $i from 1 through 12 {
+  .col-xl-#{$i} {
+    width: $col-size * $i;
+    // padding: 1%;
+  }
+
+  .offset-xl-#{$i} {
+    margin-left: $col-size * $i;
+  }
+}
+
+// for medium sized screens
+@media only screen and (max-width: 768px) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: $col-size * $i;
+      // padding: 1%;
+    }
+
+    .offset-md-#{$i} {
+      margin-left: $col-size * $i;
+    }
+  }
+}
+
+// for small sized screens
+@media only screen and (max-width: 600px) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: $col-size * $i;
+      // padding: 1%;
+    }
+
+    .offset-sm-#{$i} {
+      margin-left: $col-size * $i;
+    }
+  }
+}
+
+.container {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.navbar {
+  padding: 20px 0px;
+  box-sizing: border-box;
+}
+
+.nav-link {
+  padding: 0px 20px;
+  font-family: "Raleway", sans-serif;
+  font-size: smaller;
+
+  &:hover {
+    font-weight: bolder;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.btn {
+  box-sizing: border-box;
+  margin: 0px 5px;
+  font-size: smaller;
+}
+
+.btn-light {
+  padding: 7px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+
+  &:hover {
+    border: 1px solid;
+    transition-duration: 100ms;
+  }
+}
+
+.btn-dark {
+  padding: 7px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-family: "Raleway", sans-serif;
+
+  &:hover {
+    border: 1px solid;
+    transition-duration: 100ms;
+    background-color: white;
+    color: black;
+  }
+}
+
+.nav-item {
+  align-items: center;
+}
+
+.session-box {
+  justify-content: flex-end;
+}
+
+.logo-con {
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  .nav-link {
+    font-family: "Poiret One", cursive;
+    font-size: x-large;
+  }
+}
+
+.body {
+  height: auto;
+}
+
+section {
+  height: 80vh;
+}
+.image-con-2 {
+  justify-content: flex-end;
+  background-image: url("../images/social.jpg");
+  background-size: cover;
+  border-radius: 83% 17% 70% 30% / 10% 61% 39% 90%;
+}
+
+.text-con {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.text-area {
+  line-height: 3;
+}
