@@ -133,11 +133,18 @@ a {
 .body {
   height: auto;
 }
-
 section {
   height: 95vh;
   margin: 20px 0px;
 }
+
+.image-con-1 {
+  img {
+    object-fit: cover;
+    width: 550px;
+  }
+}
+
 .image-con-2 {
   justify-content: flex-end;
   background-image: url("../images/social.jpg");
@@ -170,8 +177,18 @@ section {
   .hide {
     display: none;
   }
-
+  section {
+    height: auto;
+  }
   .image-con-2 {
     min-height: 200px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .image-con-1 {
+    img {
+      width: 300px !important;
+    }
   }
 }
